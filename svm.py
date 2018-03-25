@@ -23,12 +23,14 @@ def main():
 	fig2 = pylab.figure()
 	fig2.suptitle("SVM With Polynomial Kernel")
 	pltnum=1
+
 	for degree in range(1, 10):
 		ax = fig2.add_subplot(3,3, pltnum )
 		ax.set_title("degree = {}".format(degree))
 		polynomial(X,y, degree, ax)
 		pltnum+=1
 			
+        pylab.show()
 	
 		
 
@@ -82,3 +84,4 @@ def mesh(samples, step=0.2):
 
 #test( rbf_clsf, rq_clsf, X_test, Y_test )
 
+main()
